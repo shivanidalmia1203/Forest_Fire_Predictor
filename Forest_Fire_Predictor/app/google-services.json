@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "939763418054",
+    "firebase_url": "https://hack-9cdfa.firebaseio.com",
+    "project_id": "hack-9cdfa",
+    "storage_bucket": "hack-9cdfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939763418054:android:8406253ce5371125a728c7",
+        "android_client_info": {
+          "package_name": "com.nikki.hack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "939763418054-gbk44553h0bna38228lcs979goa3p5e8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSA7dPwXmbt_ls4wq0sUGTBo2_98Wcx2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "939763418054-gbk44553h0bna38228lcs979goa3p5e8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

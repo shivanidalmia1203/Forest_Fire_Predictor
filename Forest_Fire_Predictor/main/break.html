@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Forest Fire Predictor</title>
+	
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/animate.min.css" rel="stylesheet" >	
+	<link href="css/font-awesome.min.css" rel="stylesheet">	
+	<link href="css/prettyPhoto.css" rel="stylesheet">
+	
+	<link href="css/theme.css" rel="stylesheet">	
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/colors/blue.css" rel="stylesheet" class="colors">
+
+
+	<!-- Google Font -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type='text/css'>
+    
+	<!-- Favicons -->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">	
+    <link rel="apple-touch-icon" href="images/ico/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/ico/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
+		
+		
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet" />
+	<style>
+        #map { position:static; top:0; bottom:0; width:100%;   }
+		
+    </style>	
+</head>
+
+<body data-spy="scroll" data-target="#mynav" data-offset="85">
+
+<!-- Preloader --> 
+<div id="preloader">
+	<div id="status">
+		<div class="spinner">
+			  <div class="rect1"></div>
+			  <div class="rect2"></div>
+			  <div class="rect3"></div>
+			  <div class="rect4"></div>
+			  <div class="rect5"></div>
+		</div>
+	</div>
+</div>
+<!-- End Preloader -->
+
+<header>
+
+<!-- Bootstrap Menu -->
+<div id="navigation">
+	<div class="navbar-wrapper">
+		<nav class="navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand"  href="#"></a>
+						
+					</div>
+					<div id="mynav" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav main-nav-list">
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#team">Team</a></li>
+							<li><a href="#works">Visualizer</a></li>
+							<li><a href="#news">News</a></li>
+							<li><a href="#contacts">Contact</a></li>								
+						</ul>
+					</div>		
+				</div>
+			</div>
+		</nav>
+	</div>
+</div>
+<!-- End Bootstrap Menu -->
+
+<!-- Slider -->
+<section id="home">
+	<div class="slide-wrap">
+		<div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="item active"> 
+					<div class="caption">
+					  <h1 class="animated fadeInLeftBig">Welcome to <strong><br>
+					    Forest Fire Detector</strong></h1>
+					</div>
+				</div>
+				<div class="item"> 
+					<div class="caption">
+						<h1 class="animated fadeInLeftBig"><strong>Prevention</strong> Is Better Than <strong>Cure</strong></h1>
+					</div>
+				</div>
+				<div class="item"> 
+					<div class="caption">
+						<h1 class="animated fadeInLeftBig">We love <strong>Nature</strong></h1>
+					</div>
+				</div>
+			</div>
+			<a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+			<a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
+    </div>	
+	</div>	
+</section>
+<!-- End Slider -->
+
+</header>
+	
+<!-- About Forest Fire Predictor -->
+<section class="section-wrapper" id="about">
+	<div class="about-us">
+		<div class="why-us">	  
+			<div class="container">	  
+				<div class="row">
+					<!-- Block Title -->
+					<div class="section-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">			
+						<h1><span>ABOUT FOREST FIRE DETECTOR</span></h1>							
+					</div>
+					<div class="element-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">			
+						<h1>Why Choose Us ?</h1>
+						<h3>We Are Dedicated <span class="main-color">Team</span> Who Thinks To Change The <span class="main-color">Future</span></h3>
+					</div>
+					<!-- End Block Title -->
+					
+					<div class="wrapper-why-us">
+						<h3>We would solve the <span class="main-color">Forest Fire Prediction</span> problem by using <span class="main-color">Machine Learning</span> or <span class="main-color">Deep Learning</span> where would estimate the percentage of fire within the forest using a dataset where we would determine coordinates of the hotspots where fire initialization has the most<span class="main-color"> Probability </span> by researching the feature which are crucial towards and we would determine the area of this widespread by selecting the features we would check and tells its importance in format of facts telling users the percentage we would determine that by changing the feature values which would effect our output value and note the change , percentage of predicting fire would come out from<span class="main-color"> Normalizing </span> the area output , we would use dataset from internet and customize the dataset adding new features from this dataset the output is area which we would determine it by svm or<span class="main-color"> Neural Network </span> while we store feature importance permenentaly and manipulate it according to the days probability of fire happening. We are thinking to use <span class="main-color">API </span> for the days data and implying it into our<span class="main-color"> Machine Learning Model</span>. Further on we are trying to make <span class="main-color">Visualizer </span> which would represent live<span class="main-color"> Real Life Forest Condition </span> and how would the fire spread and it's rate of fire spreading within the forest within a day.</h3>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End About Forest Fire Predictor -->
+
+
+	<!-- Facts --> 
+	<div class="facts parallax">
+		<div class="overlay">
+			<div class="wrapper-block-facts">
+				<div class="container">	  
+					<div class="row">
+						<div class="element-title">			
+							<h1 class="main-color wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Some <strong>Interesting</strong> Facts</h1>
+							<h3 class="white-color wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">We lose hectares of land and our natural vegetation gets destroyed due to our own carelessness.</h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="wrapper-number">	  
+							<div class="col-lg-3 col-md-3">
+								<div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">
+									<p class="timer" data-from="0" data-to="558" data-speed="2000">558</p>								
+								</div>
+								<div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+									Total Number Of Fires<br> in India, <br> Jan 1 - Feb 25,2019
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3">
+								<div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="450ms">
+									<p class="timer" data-from="0" data-to="125" data-speed="2000">125</p>		
+								</div>
+								<div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="450ms">
+									Forest Fires Percentage Increased Between<br> 2015 - 2017.
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3">
+								<div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="600ms">
+									<p class="timer" data-from="0" data-to="90" data-speed="2000">90</p>		
+								</div>
+								<div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="600ms">
+									Percent Of The Forest Fires Due To Human Carelessness
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3">
+								<div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="750ms">
+									<p class="timer" data-from="0" data-to="1176" data-speed="2000">1176</p>		
+								</div>
+								<div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="750ms">
+									Crore Money Lost Due To Forest Fires.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Facts --> 
+
+</section> 
+<!-- End About Section --> 
+	
+<!-- Start Fact Section --> 	
+<section>
+ 	
+	
+</section>
+<!-- End Fact Section --> 
+	<!-- Current Status -->
+	<div class="skills parallax">
+		<div class="overlay">
+			<div class="wrapper-block-skills">
+				<!-- Block Title -->
+				<div class="element-title">	
+					<div class="row">	 		
+						<div class="container">
+						  <h1 class="main-color wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">Step Up</h1>
+						  <h3 class="white-color wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Follow These :</h3>
+						</div>
+					</div>
+				</div>
+				<!-- End Block Title -->
+				<div class="row">
+					<div class="container">	 		
+						<div class="wrapper-count">
+							<div class="col-lg-3 col-md-3">
+								<!-- Step One -->
+								<div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">
+									<input type="text" class="knob" value="86">
+									<h4>Smoking</h4>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3">
+								<!-- Step Two -->
+								<div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="500ms">
+									<input type="text" class="knob" value="93">
+									<h4>Campfire</h4>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3">
+								<!-- Step Three -->
+								<div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
+									<input type="text" class="knob" value="88">
+									<h4>Transportation</h4>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3">
+								<!-- Step Four -->
+								<div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="1100ms">
+									<input type="text" class="knob" value="95">
+									<h4>Equipments</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Current Status -->
+	
+<!-- Team Section --> 
+<section class="section-wrapper" id="team">
+	<div class="team">
+		<!-- Block Title -->
+		<div class="meet-the-team">			
+			<div class="element-title">			
+				<div class="row">	 		
+					<div class="container">	 
+					<div class="section-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">			
+						<h1><span>MEET THE TEAM</span></h1>								
+					</div>					
+						<h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Our Creative Team</h1>
+						<h3 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">This Is Our <span class="main-color">Team</span>, This Is Our <span class="main-color">Family</span></h3>
+					</div>
+				</div>
+			</div>
+			<!-- End Block Title -->
+			<div class="row">
+				<div class="container">	
+					<div class="wrapper-team">				
+						<div class="col-lg-3 col-md-3">
+							<div class="team-member">
+								<div class="team-member-holder wow flipInY" data-wow-duration="1s" data-wow-delay="300ms">
+									<div class="team-member-image">
+										<img src="images/team/member-1.jpg" alt="" /> <!-- Change Image -->	
+										<div class="team-overlay">
+											<div class="img-overlay"></div>
+										</div>
+										<div class="overlay-content"> 
+											<div class="team-member-social-list">
+												<a class="team-member-social-list-item" href="#"><i class="fa fa-facebook"></i></a>
+												<a class="team-member-social-list-item" href="#"><i class="fa fa-twitter"></i></a>
+												<a class="team-member-social-list-item" href="#"><i class="fa fa-envelope"></i></a>
+											</div>
+											<a class="view-profile profile-read-more" href="#" data-single_url="profile1.html">Profile</a>										
+										</div>
+									</div>
+									<div class="team-member-meta">
+										<h4 class="team-member-name"><span class="main-color">N</span>ikki <span class="main-color">G</span>oel</h4>
+										<div class="team-member-role">Developer</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3">
+							<div class="team-member">
+								<div class="team-member-holder wow flipInY" data-wow-duration="1s" data-wow-delay="500ms">
+									<div class="team-member-image">
+										<img src="images/team/member-2.jpg" alt="" /> <!-- Change Image -->	
+										<div class="team-overlay">
+											<div class="img-overlay"></div>
+										</div>
+										<div class="overlay-content"> 
+											<div class="team-member-social-list">
+												<a class="team-member-social-list-item" href="#"><i class="fa fa-facebook"></i></a>
+												<a class="team-member-social-list-item" href="#"><i class="fa fa-twitter"></i></a>
+												<a class="team-member-social-list-item" href="#"><i class="fa fa-envelope"></i></a>
+											</div>
+											<a class="view-profile profile-read-more" href="#" data-single_url="profile2.html">Profile</a>										
+										</div>
+									</div>
+									<div class="team-member-meta">
+										<h4 class="team-member-name"><span class="main-color">Y</span>ash <span class="main-color">C</span>haudhary</h4>
+										<div class="team-member-role">Developer</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3">
+							<div class="team-member">
+								<div class="team-member-holder wow flipInY" data-wow-duration="1s" data-wow-delay="800ms">
+									<div class="team-member-image">
+										<img src="images/team/member-3.jpg" alt="" /> <!-- Change Image -->	
+										<div class="team-overlay">
+											<div class="img-overlay"></div>
+										</div>
+										<div class="overlay-content"> 
+											<div class="team-member-social-list">
+												<a class="team-member-social-list-item" href="#"><i class="fa fa-facebook"></i></a>
+												<a class="team-member-social-list-item" href="#"><i class="fa fa-twitter"></i></a>
+												<a class="team-member-social-list-item" href="#"><i class="fa fa-envelope"></i></a>
+											</div>
+											<a class="view-profile profile-read-more" href="#" data-single_url="profile3.html">Profile</a>											
+										</div>
+									</div>
+									<div class="team-member-meta">
+										<h4 class="team-member-name"><span class="main-color">P</span>ulkit <span class="main-color">J</span>hanji</h4>
+										<div class="team-member-role">Developer</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3">
+							<div class="team-member">
+								<div class="team-member-holder wow flipInY" data-wow-duration="1s" data-wow-delay="1100ms">
+									<div class="team-member-image">
+										<img src="images/team/member-4.jpg" alt="" /> <!-- Change Image -->	
+										<div class="team-overlay">
+											<div class="img-overlay"></div>
+										</div>
+										<div class="overlay-content"> 
+											<div class="team-member-social-list">
+												<a class="team-member-social-list-item" href="#"><i class="fa fa-facebook"></i></a>
+												<a class="team-member-social-list-item" href="#"><i class="fa fa-twitter"></i></a>
+												<a class="team-member-social-list-item" href="#"><i class="fa fa-envelope"></i></a>
+											</div>
+											<a class="view-profile profile-read-more" href="#" data-single_url="profile4.html">Profile</a>										
+										</div>
+									</div>
+									<div class="team-member-meta">
+										<h4 class="team-member-name"><span class="main-color">P</span>arul <span class="main-color">B</span>hardwaj</h4>
+										<div class="team-member-role">Developer</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+</section> 
+<!-- End Team Section --> 
+	
+	<section class="section-wrapper" id="works">
+	<div class="works">
+		<!-- Block Title -->	
+		<div class="element-title">			
+			<div class="row">	 		
+				<div class="container">
+					<div class="section-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">			
+						<h1><span>Visualizer</span></h1>							
+					</div>				
+					<h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Visual Aid</h1>
+					<h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">These Are Our <span class="main-color">Works</span>, Made With <span class="main-color">Hardwork & Dedication</span></h3>
+					<br>
+					<div class="container">
+						<div id='map'></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Block Title -->
+		
+	</div>
+
+	
+
+</section> 
+<!-- News Section --> 
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	
+<section class="section-wrapper" id="news">
+	<div class="news">
+		<!-- Block Title -->	
+		<div class="element-title">			
+			<div class="row">	 		
+				<div class="container">
+					<div class="section-title wow fadeInDown">			
+						<h1><span>News & Events</span></h1>							
+					</div>
+					<h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Last news from Our sources</h1>
+					<h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Keep in Touch With Our <span class="main-color">News </span>& Events</h3>	
+				</div>
+			</div>
+		</div>
+		<!-- End Block Title -->
+		<div class="container">
+			<div class="wrapper-news">	
+				<div class="row">
+					<div class="col-lg-6 col-sm-6">	
+						<div class="news-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="300ms">	
+							<div class="entry-header">	
+								<div class="blog-image">
+									<a href="blog.html"><img alt="" src="https://c.ndtvimg.com/2019-09/mtfa5aco_indonesia-sky-haze_625x300_24_September_19.jpg" class="img-responsive"></a>
+								</div>							
+								<div class="post-date">
+									<h2>24<span>September</span></h2>
+								</div>							
+							</div>
+							<div class="entry-content test">	
+								<h3 class="entry-title">
+									<a href="blog.html">"This Is Not Mars": Indonesia Skies Turn Blood Red After Forest Fires</a>
+								</h3>							
+									
+								<p>JAKARTA: Skies over an Indonesian province turned red over the weekend, thanks to the widespread forest fires which have plagued huge parts of the country.One resident in Jambi province, who captured pictures of the sky, said the haze had "hurt her eyes and throat".Every year, fires in Indonesia create a smoky haze that can end up blanketing the entire South East Asian region, a BBC report said.A meteorology expert said the unusual sky was caused by a phenomenon known as Rayleigh scattering. </p>								
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-sm-6">	
+						<div class="news-content wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">	
+							<div class="entry-header">	
+								<div class="blog-image">
+									<a href="blog.html"><img alt="" src="https://c.ndtvimg.com/2019-09/qo96j2ho_indonesia-forest-fire-afp_625x300_12_September_19.jpg" class="img-responsive"></a>
+								</div>							
+								<div class="post-date">
+									<h2>13<span>September</span></h2>
+								</div>							
+							</div>
+							<div class="entry-content">	
+								<h3 class="entry-title">
+									<a href="blog.html">Indonesians Choked By Toxic Haze Due To Forest Fire Pray For Rain</a>
+								</h3>							
+								
+								</ul>	
+								<p>PEKANBARU, INDONESIA: Hundreds of people held a mass prayer for rain in a smoke-filled Indonesian city on Friday, desperately hoping that downpours will extinguish forest fires and wash away the toxic haze covering wide swathes of the country.Illegal fires to clear land for farming are raging on Indonesia's Sumatra and Borneo islands with firefighters battling round the clock through charred forests, and water-bombing helicopters deployed to douse the flames.</p>								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-sm-6">	
+						<div class="news-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="600ms">	
+							<div class="entry-header">	
+								<div class="blog-image">
+									<a href="blog.html"><img alt="" src="https://i.ndtvimg.com/i/2015-09/indonesia-forest-fire_650x400_61442591717.jpg" class="img-responsive"></a>
+								</div>							
+								<div class="post-date">
+									<h2>19<span>September</span></h2>
+								</div>							
+							</div>
+							<div class="entry-content">	
+								<h3 class="entry-title">
+									<a href="blog.html">Thousands Of Schools Shut In Malaysia, Indonesia As Haze Affects Students</a>
+								</h3>							
+									
+								<p>KUALA LUMPUR: Thousands of schools were shuttered across Malaysia and Indonesia Thursday, affecting at least 1.7 million pupils, officials said, as toxic haze from rampant forest fires sent air quality plummeting.Nearly 2,500 schools were ordered to shut their doors in Malaysia -- including nearly 300 in the smog-hit capital Kuala Lumpur -- over soaring health concerns sparked by toxic haze from out-of-control blazes in Indonesia's Sumatra and Borneo islands.Indonesia said hundreds of schools in hard-hit Riau province on Sumatra would also be shut Thursday, with 800 closed in one district alone, while about 1,300 were shut in its Central Kalimantan province on Borneo.</p>								
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-sm-6">	
+						<div class="news-content wow fadeInRight" data-wow-duration="1s" data-wow-delay="600ms">	
+							<div class="entry-header">	
+								<div class="blog-image">
+									<a href="blog.html"><img alt="" src="https://c.ndtvimg.com/2019-08/msk5g5_amazon-fires_625x300_28_August_19.jpg" class="img-responsive"></a>
+								</div>							
+								<div class="post-date">
+									<h2>1<span>September</span></h2>
+								</div>							
+							</div>
+							<div class="entry-content">	
+								<h3 class="entry-title">
+									<a href="blog.html">New Outbreaks Of Fire In Brazil's Amazon Forest</a>
+								</h3>							
+							
+								</ul>	
+								<p>SAO PAULO, BRAZIL: The number of fires in Brazil's Amazon basin is still on the rise, even though the government has banned burning, officials said on Saturday.In the first 48 hours since the ban was issued, satellite data from the National Space Research Institute (INPE) showed 3,859 new outbreaks of fire, of which some 2,000 were concentrated in the Amazon region.From January to the end of August, 51.9 percent of Brazil's recorded 88,816 fires were in the rainforest, according to the INPE, a number experts call a dramatic, direct consequence of farmers' widespread deforestation.</p>								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	
+</section> 
+<!-- End News Section -->	
+	
+	
+<!-- Contact Section --> 
+<section class="section-wrapper" id="contacts">
+	<!-- Contacts -->	
+	<div class="contacts"> 
+	
+		<!-- Block Title -->	
+		<div class="element-title">			
+			<div class="row">	 		
+				<div class="container">
+					<div class="section-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">			
+						<h1><span>Contact Us</span></h1>							
+					</div>				
+					<h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Contact Our <span class="main-color">Staff </span> to ask to Clarify any doubts</h3>	
+				</div>
+			</div>
+		</div>
+		<!-- End Block Title -->	
+	
+		<div class="container">
+			<div class="row">	
+				<div class="wrapper-contacts">		
+					<div class="contact_form">
+						<div class="row">
+							<div class="wrapper-contacts-icons">	
+							  <div class="col-xs-4 wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">	
+									<i class="fa fa-map-marker"></i>
+									<div class="">Palika Vihar</div>
+									<div class="">110043 New Delhi</div>
+							  </div>								
+								<div class="col-xs-4 wow fadeInRight" data-wow-duration="1s" data-wow-delay="450ms">	
+									<i class="fa fa-mobile-phone"></i>
+									<div class="">Mon - Fri 08:00 21:00</div>
+									<div class="">+91123456789</div>
+								</div>
+								<div class="col-xs-4 wow fadeInRight" data-wow-duration="1s" data-wow-delay="600ms">	
+									<i class="fa fa-envelope-o"></i>
+									<div class="">Feel Free to Email Us</div>
+									<div class="">hellohalo62@gmail.com</div>
+							  </div>								
+								
+							</div>								
+						</div>								
+						<div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
+							<!-- Start contact-form -->	
+							<form id="contact-form" method="post" action="#">
+								<div class="col-lg-6 col-sm-6">				
+									<div class="form-group">
+										<input type="text" name="name" class="form-control" placeholder="Your name">
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" class="form-control" placeholder="Your email address">
+									</div>
+									<div class="form-group">
+										<input type="text" name="subject" class="form-control" placeholder="Subject">
+									</div>
+								</div>
+								<div class="col-lg-6 col-sm-6">				
+									<div class="form-group">
+										<textarea  name="message" class="form-control" placeholder="Your message" rows="8"></textarea>
+									</div>
+									<div id="output"></div>
+									<input type="submit" class="" value="Submit">
+								</div>
+							</form>
+							<!-- End contact-form -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Contacts -->	
+	
+</section> 
+<!-- End Contact Section -->		
+	
+<!-- Footer -->
+<div class="bottom-footer">
+	<div class="container"> 
+		<div class="bottom-footer-center wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+			<ul class="bottom-social-icons">
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+				<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="#"><i class="fa fa-flickr"></i></a></li>
+			</ul>
+		</div>	
+		<div class="bottom-footer-left wow fadeInUp" data-wow-duration="1s" data-wow-delay="450ms"> </div>		  
+	</div>
+</div>
+<!-- End Footer -->		
+
+<!-- Scroll to Top  -->
+<a href="#" class="scroll-up"><i class="fa fa-arrow-up"></i></a>
+<!-- End Scroll To Top  -->
+	
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/retina.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/wow.min.js"></script>	
+	<script src="js/waypoints.min.js"></script>	
+	<script src="js/jquery.countTo.js"></script>
+	<script src="js/jquery.mixitup.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>	
+	<script src="js/jquery.knob.min.js"></script>	
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/custom.js"></script>
+  	
+	<script src='https://d3js.org/d3.v3.min.js' charset='utf-8'></script>
+    <script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYWxjcm9taWRvIiwiYSI6ImNrMWVuYm52bTBncXozaHA3cThjc2xoczgifQ.aRJ5DVnn7KOAvEDkwd_k1Q';
+var map = new mapboxgl.Map({
+    container: 'map',
+    //style: 'mapbox://styles/mapbox/satellite-v9',
+	style: 'mapbox://styles/alcromido/ck1endb5w2lv51cpilnbhovpd',
+    zoom: 0
+});
+
+map.on('load', function () {
+    // We use D3 to fetch the JSON here so that we can parse and use it separately
+    // from GL JS's use in the added source. You can use any request method (library
+    // or otherwise) that you want.
+    //
+	//d3.json('https://docs.mapbox.com/mapbox-gl-js/assets/hike.geojson', function(err, data) {
+	//d3.json('http://localhost:9000/test.geojson', function(err, data) {	
+	d3.json('test2.geojson', function(err, data) {		
+        if (err) throw err;
+
+        // save full coordinate list for later
+        var coordinates = data.features[0].geometry.coordinates;
+
+        // start by showing just the first coordinate
+        data.features[0].geometry.coordinates = [coordinates[0]];
+
+        // add it to the map
+        map.addSource('trace', { type: 'geojson', data: data });
+		
+        map.addLayer({
+            "id": "trace",
+            "type": "line",
+            "source": "trace",
+            "paint": {
+                "line-color": "yellow",
+                "line-opacity": 1,
+                "line-width": 10
+            }
+        });
+
+        // setup the viewport
+        map.jumpTo({ 'center': coordinates[0], 'zoom': 12 });
+        map.setPitch(30);
+
+        // on a regular basis, add more coordinates from the saved list and update the map
+        var i = 0;
+        var timer = window.setInterval(function() {
+            if (i < coordinates.length) {
+                data.features[0].geometry.coordinates.push(coordinates[i]);
+                map.getSource('trace').setData(data);
+                map.panTo(coordinates[i]);
+                i++;
+            } else {
+                window.clearInterval(timer);
+            }
+        }, 50);
+    });
+});
+</script>
+
+</body>
+</html>
