@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="startblue">#660066</color>
+    <color name="endblue">#44C9C6</color>
+    <color name="graylight">#EEE7EA</color>
+    <color name="profile_desc">#D1D1FF</color>
+    <color name="bg_meta_container">#000000</color>
+    <color name="profile_default_tint">#e0e0e0</color>
+
+    <color name="screen1">#F44336</color>
+    <color name="screen2">#64DD17</color>
+    <color name="screen3">#9C27B0</color>
+
+
+    <array name="dot_on_page_active">
+        <item>#B71C1C</item>
+        <item>#8BC34A</item>
+        <item>#4A148C</item>
+
+    </array>
+
+    <array name="dot_on_page_not_active">
+        <item>#FF5252</item>
+        <item>#CCFF90</item>
+        <item>#E040FB</item>
+    </array>
+</resources>

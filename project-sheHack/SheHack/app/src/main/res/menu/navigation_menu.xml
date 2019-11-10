@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_home"
+        android:title="Home"/>
+
+    <item android:id="@+id/nav_visualizer"
+        android:title="Visualizer"/>
+
+    <item android:id="@+id/nav_suggestions"
+        android:title="Suggestions"/>
+
+    <item android:id="@+id/nav_Insurance"
+        android:title="Insurance"/>
+
+    <item android:id="@+id/nav_join_us"
+        android:title="Join Us"/>
+
+    <item android:id="@+id/nav_share"
+        android:title="Share"/>
+
+</menu>

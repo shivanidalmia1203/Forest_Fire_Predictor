@@ -1,29 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[32]:
-
-
 import pandas as pd
 import numpy as np
-
-
-# In[33]:
-
+from sklearn.metrics import precision_score, recall_score, confusion_matrix, classification_report, accuracy_score, f1_score
 
 data = pd.read_csv('forestfires.csv')
 adder=pd.read_csv('adder.csv')
 dataset=pd.concat([data,adder])
-
-
-# In[ ]:
-
-
-
-
-
-# In[35]:
-
 
 
 #Getting Independent and Dependent Features
@@ -73,22 +54,6 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[37]:
-
-
 from keras import backend as K
 
 def recall_m(y_true, y_pred):
@@ -106,10 +71,9 @@ def precision_m(y_true, y_pred):
 def f1_m(y_true, y_pred):
     precision = precision_m(y_true, y_pred)
     recall = recall_m(y_true, y_pred)
-    return 2*((precision*recall)/(precision+recall+K.epsilon()))
-
-
-# In[38]:
+    val = 2*((precision*recall)/(precision+recall+K.epsilon()))
+    #print(val)
+    return val
 
 
 import keras
@@ -125,80 +89,18 @@ classifier.add(Dense(units = 7, kernel_initializer = 'uniform', activation = 'so
 classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
 
 
-# In[ ]:
-
-
-
-
-
-# In[40]:
-
-
 classifier.fit(X_train, y_train, batch_size = 25, epochs = 600)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[41]:
 
 
 y_pred = classifier.predict(X_test)
 
-
-# In[42]:
-
-
 o1=pd.DataFrame(y_pred.max(axis=1))
-
-
-# In[ ]:
-
-
-
-
-
-# In[43]:
-
 
 tester=np.argmax(y_pred,axis=1)
 
-
-# In[ ]:
-
-
-
-
-
-# In[44]:
-
-
 y = np_utils.to_categorical(tester)
 
-
-# In[ ]:
-
-
-
-
-
-# In[45]:
-
-
 output=pd.DataFrame(tester)
-
-
-# In[46]:
-
 
 un_scale=[1,10,100,300,1000,5000]
 def un_scaler(y):
@@ -216,11 +118,6 @@ def un_scaler(y):
         y1 = '1,000 acres or more, but less than 5,000 acres'
     return y1
     
-
-
-# In[48]:
-
-
 '''
 Classification
 #Convert to Acres then Classify Size
@@ -231,104 +128,48 @@ Class 4.D - 100 acres or more, but less than 300 acres;
 Class 5.E - 300 acres or more, but less than 1,000 acres;
 Class 6.F - 1,000 acres or more, but less than 5,000 acres;
 '''
+# # predict probabilities for test set
+# yhat_probs = classifier.predict(X_test, verbose=0)
+# # predict crisp classes for test set
+# yhat_classes = classifier.predict_classes(X_test, verbose=0)
 
+# # reduce to 1d array
+# yhat_probs = yhat_probs[:, 0]
+# yhat_classes = yhat_classes[:, 0]
 
-# In[49]:
+# # accuracy: (tp + tn) / (p + n)
+# accuracy = accuracy_score(y_test, yhat_classes)
+# print('Accuracy: %f' % accuracy)
+# # precision tp / (tp + fp)
+# precision = precision_score(y_test, yhat_classes)
+# print('Precision: %f' % precision)
+# # recall: tp / (tp + fn)
+# recall = recall_score(y_test, yhat_classes)
+# print('Recall: %f' % recall)
+# # f1: 2 tp / (2 tp + fp + fn)
+# f1 = f1_score(y_test, yhat_classes)
+# print('F1 score: %f' % f1)
 
 
 test=pd.DataFrame(y_test)
 test=test.drop([0],axis=1)
 
-
-# In[50]:
-
-
 test=test.drop([6],axis=1)
-
-
-# In[ ]:
-
-
-
-
-
-# In[52]:
-
 
 o2=output[0].apply(un_scaler)
 o2=pd.DataFrame(o2)
 
-
-# In[53]:
-
-
 o1.columns=["percentage"]
 o2.columns=["desc"]
 
-
-# In[54]:
-
-
-
 outing=pd.concat([o1,o2],axis=1)
 
-
-# In[55]:
-
-
 outing.iloc[0]
-
-
-# In[56]:
-
 
 outing.to_json('percent.json')
 
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[338]:
-
-
 classifier.save("ANN.h5")
-
-
-# In[ ]:
-
 
 
 
